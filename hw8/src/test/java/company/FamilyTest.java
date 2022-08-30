@@ -14,14 +14,14 @@ class FamilyTest {
     @Test
     void testAddChild(){
         family.addChild(child);
-        assertEquals(1, family.getChildren().length);
+        assertEquals(1, family.getChildren().size());
     }
 
     @Test
     void testDeleteChild(){
         family.addChild(child);
         family.deleteChild(0);
-        assertEquals(0, family.getChildren().length);
+        assertEquals(0, family.getChildren().size());
 
     }
     @Test
@@ -33,6 +33,6 @@ class FamilyTest {
     void fakeTestDeleteChild(){
         family.addChild(child);
         family.deleteChild(1);
-        assertNotEquals(0,family.getChildren().length);
+        assertNotEquals(0,family.getChildren().size());
     }
 }
